@@ -1,0 +1,296 @@
+@media only screen and (min-width: 950px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: #576CBC;
+    }
+
+    main {
+        padding-top: 150px;
+    }
+
+/*---------- header ----------*/
+
+    header {
+        position: absolute;
+        width: 100vw;
+        max-width:100%;
+        height: 100px;
+        left: 0px;
+        top: 0px;
+        background: #0B2447;
+    }
+
+    #logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #gaminggoods {
+        display:block;
+        margin: auto;
+        margin-top: -100px;
+        height: 100px;
+    }
+
+    .icon-container {
+        float: right;
+        line-height: 100px;
+        font-size: 50px;
+        margin-right: 10px;
+        color: white;
+    }
+    
+    .inlog {
+        position: relative;
+        box-sizing: content-box;
+        height: 30px;
+        font-size: x-large;
+        background-color: #A5D7E8;
+        float: right;
+        margin-right: 20px;
+        top: 25px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+/*---------- nav ----------*/
+
+    nav {
+        position: absolute;
+        width: 100vw;
+        max-width: 100%;
+        height: 50px;
+        left: 0px;
+        top: 100px;
+        background: #19376D;
+    }
+
+    #navsquare {
+        margin: 5px;
+        float: left;
+        width: 200px;
+        height: 40px;
+        left: 20px;
+        top: 105px;
+        background: #A5D7E8;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 40px;
+        font-weight: 600;
+        font-size: 32px;
+    }
+
+/*---------- footer ----------*/
+
+    footer {
+        margin-top: 100px;
+        width: 100vw;
+        max-width:100%;
+        height: 100px;
+        background: #0B2447;
+    }
+
+    #dots {
+        position: relative;
+        font-size: 80px;
+        background-color: #0B2447;
+        color: white;
+        float: left;
+    }
+
+    #socialmedia {
+        position: relative;
+        float: right;
+        font-size: 50px;
+        line-height: 100px;
+        color: white;
+        margin-right: 10px;
+        background-color: #0B2447;
+    }
+
+    #footertext {
+        float: left;
+        position: relative;
+        background-color: #0B2447;
+        color: white;
+        line-height: 100px;
+        text-decoration: underline;
+        margin-left: 10px;
+    }
+
+/*---------- homepage ----------*/
+
+    #homeimg {
+        width: 400px;
+        height: 200px;
+        border-radius: 30px;
+
+    }
+
+    .card {
+        width: 410px;
+        color: white;
+        padding: 5px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        place-items: center;
+        margin-top: 10%;
+    }
+
+/*---------- minecoins ----------*/
+
+    .minecoins {
+        width: 280px;
+        height: 440px;
+    }
+
+    .minecoinscard {
+        width: 280px;
+        height: 475px;
+        float: left;
+        background-color: #0B2447;
+    }
+
+    .minecoins-container {
+        display: grid;
+        grid-template-columns:auto auto;
+        place-items: center;
+        margin-top: 50px;
+    }
+
+    #minecoinsprice {
+        position: relative;
+        text-align: center;
+    }
+
+/*---------- roblox ----------*/
+
+    .robloxcard {
+        position: relative;
+        width: 300px;
+        height: 210px;
+        float: left;
+        background-color: #0B2447;
+    }
+
+    .robloxcardimg {
+        position: absolute;
+        height: 175px;
+        width: 300px;
+    }
+
+    .robuxicon {
+        position: relative;
+        float: right;
+        width: 50px;
+        height: auto;
+        right: 10px;
+        top: 5px;
+    }
+
+    .robuxamount {
+        position: relative;
+        color: white;
+        float: right;
+        font-size: 40px;
+        top: 10px;
+        right: 5px;
+    }
+
+    .robloxprice {
+        position: absolute;
+        color: white;
+        bottom: 5px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .robloxgrid {
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        place-items: center;
+        height: 500px;
+        width: 1050px;
+        margin-bottom: 50px;
+    }
+
+/*---------- roblox ----------*/
+
+.vbucksgrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 1000px;
+}
+
+.vbuckscard {
+    margin: 15px;
+    background-color: #A5D7E8;
+    height: 240px;
+    width: 200px;
+    text-align: center;
+}
+
+.vbucksprice {
+    padding: 2%;
+    height: 35px;
+    color: white;
+    background-color: #0B2447;
+    position: relative;
+}
+
+.vbucksimg {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+/*--------------------*/
+
+    .center {
+        text-align: center;
+    }
+
+    .white {
+        color: white;
+    }
+
+    #anker {
+        display: table;
+        margin: auto
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .icon-container i:nth-child(2) {
+        display: none; 
+    }
+    
+    .icon-container:hover i:nth-child(1) {
+        display: none;
+    }
+    
+    .icon-container:hover i:nth-child(2) {
+        display: block;
+    }
+
+}
+
