@@ -22,8 +22,9 @@
     //$recset is een array met gevonden records uit de database
     $recset = $query -> fetchAll(PDO::FETCH_ASSOC);
 
-    $price = $recset[0]["product_price"];
-    $amount = $recset[0]["product_amount"];
+    foreach($recset as $key => $value){
+        
+    }
 ?>
 <div class="robloxgrid">
     <div class="robloxcard">
@@ -34,33 +35,33 @@
     </div>
     <div class="robloxcard">
         <img class="robloxcardimg" src="img/robloxcard.png" alt="robloxcard">
-        <p class="robuxamount">800</p>
+        <p class="robuxamount"><?= $recset[1]["product_amount"]; ?></p>
         <img class="robuxicon" src="img/robuxicon.png" alt="robux">
-        <h2 class="robloxprice">€11.99</h2>
+        <h2 class="robloxprice">€<?= $recset[1]["product_price"]; ?></h2>
     </div>
     <div class="robloxcard">
         <img class="robloxcardimg" src="img/robloxcard.png" alt="robloxcard">
-        <p class="robuxamount">1700</p>
+        <p class="robuxamount"><?= $recset[2]["product_amount"]; ?></p>
         <img class="robuxicon" src="img/robuxicon.png" alt="robux">
-        <h2 class="robloxprice">€23.99</h2>
+        <h2 class="robloxprice">€<?= $recset[2]["product_price"]; ?></h2>
     </div>
     <div class="robloxcard">
         <img class="robloxcardimg" src="img/robloxcard.png" alt="robloxcard">
-        <p class="robuxamount">4500</p>
+        <p class="robuxamount"><?= $recset[3]["product_amount"]; ?></p>
         <img class="robuxicon" src="img/robuxicon.png" alt="robux">
-        <h2 class="robloxprice">€59.99</h2>
+        <h2 class="robloxprice">€<?= $recset[3]["product_price"]; ?></h2>
     </div>
     <div class="robloxcard">
         <img class="robloxcardimg" src="img/robloxcard.png" alt="robloxcard">
-        <p class="robuxamount">10000</p>
+        <p class="robuxamount"><?= $recset[4]["product_amount"]; ?></p>
         <img class="robuxicon" src="img/robuxicon.png" alt="robux">
-        <h2 class="robloxprice">€119.99</h2>
+        <h2 class="robloxprice">€<?= $recset[4]["product_price"]; ?></h2>
     </div>
     <div class="robloxcard">
         <img class="robloxcardimg" src="img/robloxcard.png" alt="robloxcard">
-        <p class="robuxamount">22500</p>
+        <p class="robuxamount"><?= $recset[5]["product_amount"]; ?></p>
         <img class="robuxicon" src="img/robuxicon.png" alt="robux">
-        <h2 class="robloxprice">€239.99</h2>
+        <h2 class="robloxprice">€<?= $recset[5]["product_price"]; ?></h2>
     </div>
 </div>
 <?php
