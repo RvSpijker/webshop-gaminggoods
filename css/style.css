@@ -60,6 +60,10 @@
         padding: 10px;
     }
 
+    .inlog:hover {
+        text-decoration: underline;
+    }
+
 /*---------- nav ----------*/
 
     nav {

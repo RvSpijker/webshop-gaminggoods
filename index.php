@@ -1,4 +1,6 @@
 <?php
+    $page_title = 'index';
+
     include_once 'includes/header.php';
 ?>
 <div class="grid">

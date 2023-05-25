@@ -1,4 +1,6 @@
 <?php
+    $page_title = 'verlanglijst';
+
     include_once 'includes/header.php';
 ?>
 

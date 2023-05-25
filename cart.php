@@ -1,4 +1,6 @@
 <?php
+    $page_title = 'cart';
+
     include_once 'includes/header.php';
 ?>
 

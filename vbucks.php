@@ -1,4 +1,6 @@
 <?php
+    $page_title = 'vbucks';
+
     include_once 'includes/header.php';
 ?>
 <div class="vbucksgrid">

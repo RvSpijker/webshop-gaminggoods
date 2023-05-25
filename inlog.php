@@ -1,4 +1,6 @@
 <?php
+    $page_title = 'inlog';
+
     include_once 'includes/header.php';
 ?>
 
