@@ -1,7 +1,12 @@
 <?php
     $page_title = 'index';
 
-    include_once 'includes/header.php';
+    include_once 'src/includes/header.php';
+
+    getLoggedInUserID();
+    if ($_SESSION != false){
+    echo $_SESSION['fullname'];
+    }
 ?>
 <div class="grid">
     <a href="robux.php">
@@ -24,4 +29,4 @@
     </a>
 </div>
 <?php
-    include_once 'includes/footer.php';
+    include_once 'src/includes/footer.php';
