@@ -30,7 +30,7 @@
         </a>
         <a href="verlanglijst.php">
             <div id="headericons">
-                <div class="icon-container">
+                <div id="headericon" class="icon-container">
                     <i class="bi bi-heart"></i>
                     <i class="bi bi-heart-fill"></i>
                 </div>
@@ -38,7 +38,7 @@
         </a>
         <?php if ($_SESSION == true){ ?>
             <a href="src/formhandlers/logout.php">
-                <h1 class="inlog">Uitloggen</h1> 
+                <h1 class="inlog">Uitloggen</h1>
             </a>
         <?php } else { ?>
             <a href="inlog.php">
@@ -52,8 +52,8 @@
         <a id="anker" href="index.php"><img id="gaminggoods" src="img/gaminggoods.png" alt="Logo"></a>
     </header>
     <nav>
-        <a <?php if($page_title == "robux"){print "class='bluenav'";}?> href="vbucks.php"><div id="navsquare">V-Bucks</div></a>
-        <a href="robux.php"><div id="navsquare">Robux</div></a>
-        <a href="minecoins.php"><div id="navsquare">Minecoins</div></a>
+        <a href="vbucks.php"><div id="navsquare" <?php if($page_title == "vbucks"){print "class='bluenav'";}?>>V-Bucks</div></a>
+        <a href="robux.php"><div id="navsquare" <?php if($page_title == "robux"){print "class='bluenav'";}?>>Robux</div></a>
+        <a href="minecoins.php"><div id="navsquare" <?php if($page_title == "minecoins"){print "class='bluenav'";}?>>Minecoins</div></a>
     </nav>
     <main>

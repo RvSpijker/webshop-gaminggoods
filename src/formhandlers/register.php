@@ -29,6 +29,34 @@ $prefix = htmlentities( $_POST['prefix'] );
 $email = htmlentities( $_POST['email'] );
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
+class dbconnection extends PDO
+{
+    private $host = "localhost";
+    private $dbname = "gaminggoods";
+    private $user = "root";
+    private $pass = "";
+    public function __construct()
+    {
+        parent::__construct("mysql:host=".$this->host.";dbname=".$this->dbname."; charset=utf8", $this->user, $this->pass);
+        $this->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    }
+}
+
+$dbconnect = new dbconnection();
+
+$sql = "SELECT * FROM users WHERE firstname = '$firstname'";
+
+$query = $dbconnect -> prepare($sql);
+
+$query -> execute() ;
+
+$recset = $query -> fetchAll(PDO::FETCH_ASSOC);
+
+if($recset == false) {
+
+
+
 $sql = "INSERT INTO `users`(`firstname`, `lastname`, `prefix`, `email`, `password`)
         VALUES(:firstname, :lastname, :prefix, :email, :password)";
 $placeholders = [
@@ -46,3 +74,8 @@ $db_statement->execute($placeholders);
 // terugkeren naar het login scherm
 header('location: ../../inlog.php');
 exit();
+} else {
+    ?> <script>localStorage.setItem("username");</script>
+    header('location: ../../register.php');
+    exit();
+}

@@ -48,8 +48,3 @@ function getLoggedInUserID(): int
 
     return 0;
 }
-
-function logOut(){
-    $_SESSION = array();
-    session_destroy();
-}
