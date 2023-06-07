@@ -14,7 +14,7 @@
         <h2><?= $value["product_amount"]; ?><br>V-BUCKS</h2>
         <h2 class="vbucksprice">€<?= $value["product_price"]; ?></h2>
         <form action="src/formhandlers/addtocart.php" method="POST">
-        <button value="<?= $value["product_id"]; ?>" name="btn" class="buy buyvbucks" type="submit">Buy</button>
+        <button value="<?= $value["product_id"]; ?>" name="btn" class="buy buyvbucks" type="submit">Buy<i class="bi bi-cart-plus-fill"></i></button>
         </form>
     </div>
 <?php } ?>
