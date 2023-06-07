@@ -422,7 +422,74 @@ label {
 
 /*---------- Winkelwagen ----------*/
 
+.cartcontainer {
+    display: flex;
+    gap: 20px;
+    width: 950px;
+    height: 100px;
+    background-color: #19376D;
+    margin: 60px;
+    color: white;
+}
 
+.cartimg {
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+}
+
+.cartamount {
+    line-height: 100px;
+    margin-left: 50px;
+}
+
+.cartproduct {
+    line-height: 100px;
+}
+
+.carttrash {
+    left: 500px;
+    font-size: 40px;
+    line-height: 100px;
+    margin-left: auto;
+}
+
+.amountcontainer {
+    position: relative;
+    top: 20px;
+    background-color: #A5D7E8;
+    width: 200px;
+    height: 60px;
+    color: black;
+}
+
+.cartmin {
+    position: absolute;
+    font-size: 50px;
+    left: 5px;
+    top: 3px;
+    -webkit-text-stroke: 3px black;
+}
+
+.cartplus {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    font-size: 50px;
+    -webkit-text-stroke: 3px black;
+}
+
+.amount {
+    width: 200px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.cartprice {
+    line-height: 100px;
+    width: 150px;
+    text-align: center;
+}
 
 /*--------------------*/
 
