@@ -4,13 +4,17 @@
 
     include_once 'src/includes/header.php';
 
-    require "dbconnect.php";
+    require "src/dbconnect/dbconnect.php";
+    require "getproducts.php"
 ?>
 <div class="minecoins-container">
 <?php foreach($recset as $key => $value){ ?>
     <div class="minecoinscard">
         <img class="minecoins" src="img/<?= $value["product_img"]; ?>" alt="Minecoins">
         <h2 id="minecoinsprice" class="white">€<?= $value["product_price"]; ?></h2>
+        <form action="src/formhandlers/addtocart.php" method="POST">
+        <button value="<?= $value["product_id"]; ?>" name="btn" class="buy buyminecoins" type="submit">Buy</button>
+        </form>
     </div>
 <?php } ?>
 </div>

@@ -45,7 +45,7 @@ class dbconnection extends PDO
 
 $dbconnect = new dbconnection();
 
-$sql = "SELECT * FROM users WHERE firstname = '$firstname'";
+$sql = "SELECT * FROM users WHERE firstname = '$firstname' OR email = '$email'";
 
 $query = $dbconnect -> prepare($sql);
 
@@ -75,7 +75,9 @@ $db_statement->execute($placeholders);
 header('location: ../../inlog.php');
 exit();
 } else {
-    ?> <script>localStorage.setItem("username");</script>
-    header('location: ../../register.php');
-    exit();
+    echo 
+    '<script> 
+        localStorage.namecheck = 1;
+        window.location.href = "../../register.php";
+    </script>';
 }
