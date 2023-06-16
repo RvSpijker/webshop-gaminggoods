@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'klantenservice';
+    $page_title = 'Klantenservice';
 
     include_once 'src/includes/header.php';
 ?>

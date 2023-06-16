@@ -5,21 +5,7 @@ include_once '../helpers/auth-helpers.php';
 include_once '../dbconnect/dbconnect.php';
 
 //data base connectie
-$dbHost = '127.0.0.1'; 
-$dbName = 'gaminggoods';
-$dbUser = 'root';
-$dbPass = '';
-
-$db_connection = null;
-$db_statement = null;
-
-try {
-    $db_connection = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
-} catch(PDOException $error) {
-    header('location: ../../register.php');
-    exit();
-}
-//
+require '../dbconnect/dbcredentials.php';
 
 //user id krijgen of naar login.php sturen
 getLoggedInUserID();
@@ -47,11 +33,11 @@ if ($recset == false) {
     $amount++;
 }
 
-echo $user_id;
-echo '<br>';
-echo $product_id;
-echo '<br>';
-echo $amount;
+// echo $user_id;
+// echo '<br>';
+// echo $product_id;
+// echo '<br>';
+// echo $amount;
 
 //data toevoegen aan cart of aantal verhogen als het al bestaat
 if ($amount == 1) {

@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'minecoins';
+    $page_title = 'Minecoins';
     $product = 'minecoins';
 
     include_once 'src/includes/header.php';

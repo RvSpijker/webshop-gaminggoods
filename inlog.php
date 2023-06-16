@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'inlog';
+    $page_title = 'Login';
 
     include_once 'src/helpers/auth-helpers.php';
     include_once 'src/includes/header.php';

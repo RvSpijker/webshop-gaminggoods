@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'register';
+    $page_title = 'Register';
 
     include_once 'src/helpers/auth-helpers.php';
     include_once 'src/includes/header.php';
@@ -32,6 +32,18 @@ if(localStorage.namecheck == 1){
     <div>
         <label for="wachtwoord">Wachtwoord</label><br>
         <input class="input" type="password" id="wachtwoord" name="password" placeholder="wachtwoord"/>
+    </div>
+    <div>
+        <label for="street">Straat</label><br>
+        <input class="input" type="text" id="street" name="street" placeholder="Weg 1"/>
+    </div>
+    <div>
+        <label for="postalcode">Postcode</label><br>
+        <input class="input" type="text" id="postalcode" name="postalcode" placeholder="1234 AB"/>
+    </div>
+    <div>
+        <label for="country">Land</label><br>
+        <input class="input" type="text" id="country" name="country" placeholder="Land"/>
     </div>
     <button class="formbutton" type="submit">Registreren</button>
 </form>

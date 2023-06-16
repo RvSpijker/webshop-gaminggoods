@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'verlanglijst';
+    $page_title = 'Verlanglijst';
 
     include_once 'src/includes/header.php';
 ?>

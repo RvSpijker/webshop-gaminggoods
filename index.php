@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'index';
+    $page_title = 'Home';
 
     include_once 'src/includes/header.php';
 

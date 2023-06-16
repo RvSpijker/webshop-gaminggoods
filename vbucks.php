@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'vbucks';
+    $page_title = 'Vbucks';
     $product = 'vbucks';
 
     include_once 'src/includes/header.php';

@@ -5,22 +5,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 
 // Database credentials
-$dbHost = '127.0.0.1'; 
-$dbName = 'gaminggoods';
-$dbUser = 'root';
-$dbPass = '';
-
-// Globale variabelen voor het werken met de database
-$db_connection = null;
-$db_statement = null;
-
-// Connectie maken met de database
-try {
-    $db_connection = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
-} catch(PDOException $error) {
-    header('location: ../../register.php');
-    exit(); // die()
-}
+require '../dbconnect/dbcredentials.php';
 
 // Connectie is geslaagd, dus nu kunnen we de gegevens vastleggen in de database
 $firstname = htmlentities( $_POST['firstname'] );
@@ -28,20 +13,11 @@ $lastname = htmlentities( $_POST['lastname'] );
 $prefix = htmlentities( $_POST['prefix'] );
 $email = htmlentities( $_POST['email'] );
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$street = htmlentities( $_POST['street']);
+$postalcode = htmlentities( $_POST['postalcode']);
+$country = htmlentities( $_POST['country']);
 
-class dbconnection extends PDO
-{
-    private $host = "localhost";
-    private $dbname = "gaminggoods";
-    private $user = "root";
-    private $pass = "";
-    public function __construct()
-    {
-        parent::__construct("mysql:host=".$this->host.";dbname=".$this->dbname."; charset=utf8", $this->user, $this->pass);
-        $this->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $this->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    }
-}
+require '../dbconnect/dbconnect.php';
 
 $dbconnect = new dbconnection();
 
@@ -55,16 +31,17 @@ $recset = $query -> fetchAll(PDO::FETCH_ASSOC);
 
 if($recset == false) {
 
-
-
-$sql = "INSERT INTO `users`(`firstname`, `lastname`, `prefix`, `email`, `password`)
-        VALUES(:firstname, :lastname, :prefix, :email, :password)";
+$sql = "INSERT INTO `users`(`firstname`, `lastname`, `prefix`, `email`, `password`, `street`, `postalcode`, `country`)
+        VALUES(:firstname, :lastname, :prefix, :email, :password, :street, :postalcode, :country)";
 $placeholders = [
     ':firstname' => $firstname,
     ':lastname' => $lastname,
     ':prefix' => $prefix,
     ':email' => $email,
-    ':password' => $password
+    ':password' => $password,
+    ':street' => $street,
+    ':postalcode' => $postalcode,
+    ':country' => $country,
 ];
 
 $db_statement = $db_connection->prepare($sql);

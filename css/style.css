@@ -411,8 +411,7 @@ label {
 }   
 
 .servicetitle {
-    margin: 30px;
-    margin-left: 60px;
+    margin: 60px;
     color: white;
 }
 
@@ -421,6 +420,11 @@ label {
 }
 
 /*---------- Winkelwagen ----------*/
+
+.carttitle {
+    margin: 60px;
+    color: white;
+}
 
 .cartcontainer {
     display: flex;
@@ -433,6 +437,7 @@ label {
 }
 
 .cartimg {
+    object-fit: contain;
     height: 90px;
     width: 90px;
     margin: 5px;
@@ -451,6 +456,16 @@ label {
     left: 500px;
     font-size: 40px;
     line-height: 100px;
+
+    /* remove button style */
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.trashcan {
     margin-left: auto;
 }
 
@@ -469,6 +484,13 @@ label {
     left: 5px;
     top: 3px;
     -webkit-text-stroke: 3px black;
+
+    /* remove button style */
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
 }
 
 .cartplus {
@@ -477,6 +499,13 @@ label {
     top: 3px;
     font-size: 50px;
     -webkit-text-stroke: 3px black;
+
+    /* remove button style */
+    background: none;
+	color: inherit;
+	border: none;
+    cursor: pointer;
+	outline: inherit;
 }
 
 .amount {
@@ -489,6 +518,45 @@ label {
     line-height: 100px;
     width: 150px;
     text-align: center;
+}
+
+.totalcart {
+    display: flex;
+    color: white;
+    margin-left: 540px ;
+    margin-top: 60px;
+}
+
+.totalprice {
+    margin-left: 20px;
+    width: 150px;
+    text-align: center;
+}
+
+.buycart {
+    display: flex;
+    background-color: #A5D7E8;
+    height: 100px;
+    width: 600px;
+    line-height: 100px;
+    margin-left: 410px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.cartarrow {
+    margin-left: auto;
+    position: relative;
+    float: right;
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.buycarttext {
+    margin-left: 10px;
 }
 
 /*--------------------*/
@@ -542,6 +610,10 @@ label {
         background-color: #A5D7E8;
         border-radius: 10px;
         font-weight: bold;
+    }
+
+    .buy:hover {
+        cursor:pointer;
     }
 
 /* } */
