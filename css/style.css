@@ -434,6 +434,7 @@ label {
     background-color: #19376D;
     margin: 20px 60px 20px 60px;
     color: white;
+    border-radius: 5px;
 }
 
 .cartimg {
@@ -476,6 +477,7 @@ label {
     width: 200px;
     height: 60px;
     color: black;
+    border-radius: 5px;
 }
 
 .cartmin {
@@ -542,6 +544,7 @@ label {
     margin-left: 410px;
     margin-top: 60px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .cartarrow {

@@ -26,19 +26,6 @@ $query = $dbconnect -> prepare($sql);
 $query -> execute() ;
 $recset = $query -> fetchAll(PDO::FETCH_ASSOC);
 
-if ($recset == false) {
-    $amount = 1;
-} else {
-    $amount = $recset[0]['amount'];
-    $amount--;
-}
-
-// echo $user_id;
-// echo '<br>';
-// echo $product_id;
-// echo '<br>';
-// echo $amount;
-
 //aantal verminderen
     $sql = "DELETE FROM cart WHERE user_id = '$user_id' AND product_id = '$product_id'";
     $query = $dbconnect -> prepare($sql);
